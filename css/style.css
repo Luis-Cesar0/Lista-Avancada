@@ -14,6 +14,8 @@ body{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment:fixed ;
+   
 }
 button{
     background-color: #fdfdfd;
@@ -86,4 +88,47 @@ input,select{
 }
 #cancel-edit-btn{
     margin-top: 1rem;
+}
+
+/* todo toolbar */
+#toolbar{
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+}
+
+#toolbar h4{
+    margin-bottom: .5rem;
+}
+
+#search{
+    border-right: 1px solid #ddd;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+#search form{
+    display: flex;
+}
+
+#search input{
+    width: 100%;
+    margin-right: 0.3rem;
+}
+
+#filter{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+#filter select{
+    flex: 1;
+}
+
+/* todo list */
+.todo{
+    display: flex;
 }
