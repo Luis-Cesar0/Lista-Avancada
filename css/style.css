@@ -142,4 +142,15 @@ input,select{
     font-size: 0.9rem;
     flex: 1;
 }
-tod.button
+.todo button{
+    margin-left: 0.4rem;
+}
+
+.done{
+    background-color:#395169 ;
+}
+.done h3{
+    color: #fff;
+    text-decoration: line-through;
+    font-style: italic;
+}
