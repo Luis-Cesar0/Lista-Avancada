@@ -131,4 +131,15 @@ input,select{
 /* todo list */
 .todo{
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    transition: .3s;
 }
+
+.todo h3{
+    font-size: 0.9rem;
+    flex: 1;
+}
+tod.button
