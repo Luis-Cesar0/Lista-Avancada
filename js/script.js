@@ -75,6 +75,31 @@ const getSerachTodos = (search) => {
     })
 }
 
+const filterTodos = (filterValue) =>{
+
+    const todos = document.querySelectorAll('.todo')
+
+    switch(filterValue){
+        case 'all':
+            todos.forEach((todo) => (todo.style.display = 'flex'))
+        break
+        case 'done':
+            todos.forEach((todo) => (todo.classList.contains('done') 
+            ? (todo.style.display = 'felx') 
+            : (todo.style.display = 'none') ))
+        break
+        case 'todo':
+            todos.forEach((todo) => (!todo.classList.contains('done') 
+            ? (todo.style.display = 'felx') 
+            : (todo.style.display = 'none') ))
+        break
+        default:
+            break
+       
+        
+    }
+}
+
 // Eventos
 todoForm.addEventListener('submit', (e)=>{
     e.preventDefault(e)
@@ -138,3 +163,11 @@ eraseBtn.addEventListener('click', (e)=> {
 
     searchInput.dispatchEvent(new Event('keyup'))
 })
+
+filterBtn.addEventListener('change',(e) =>{
+    const filterValue = e.target.value
+
+    filterTodos(filterValue)
+})
+
+// 
